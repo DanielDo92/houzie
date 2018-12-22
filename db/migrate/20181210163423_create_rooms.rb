@@ -12,4 +12,3 @@ class CreateRooms < ActiveRecord::Migration
     end
   end
 end
-
