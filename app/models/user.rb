@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  validates :admin, presence: true, inclusion: { in: [true, false] }
+  validates :admin, :active, presence: true, inclusion: { in: [true, false] }
 
   belongs_to :room
 end

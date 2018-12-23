@@ -4,7 +4,7 @@ class CreateRooms < ActiveRecord::Migration
       t.string :name, null: false
       t.integer :level, null: false
       t.integer :price, null: false, default: 1_000_000
-      t.integer :occupants, null: false, default: 0
+      t.integer :vehicle_count, null: false, default: 0
       t.decimal :area, null: false, precision: 10, scale: 2
       t.boolean :suited, null: false, default: true
 
