@@ -3,7 +3,8 @@ class Room < ActiveRecord::Base
 
   validates :name, :level, :area, :price, presence: true
   validates :suited, presence: true, inclusion: { in: [true, false] }
-  has_many :bills, :users
+  # has_many :bills
+  has_many :users
 
   def current_bill
     bills.where("? <= date <= ?",
