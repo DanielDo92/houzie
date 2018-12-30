@@ -13,8 +13,8 @@
     <tr>
       <td> <%= room.name %></td>
       <td> <%= number_with_delimiter(room.price, delimiter: ",") %></td>
-      <td> <%= room.occupants %></td>
-      <td> <%= number_with_delimiter(room.current_bill.total, delimiter: ",") %> </td>
+      <td> <%= room.tenants %></td>
+      <td> <%= number_with_delimiter(room.total_payable, delimiter: ",") %> </td>
     </tr>
   <% end %>
   </tbody>

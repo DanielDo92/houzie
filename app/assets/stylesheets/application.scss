@@ -3,3 +3,7 @@
 .nav-link {
   padding-left: 0;
 }
+
+.alert-notice {
+  @extend .alert-success;
+}
