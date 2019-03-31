@@ -57,6 +57,8 @@ Rails.application.routes.draw do
   #   end
   namespace :admin do
     root "rooms#index"
+    resources :rooms
   end
   root "rooms#index"
+  resources :rooms
 end

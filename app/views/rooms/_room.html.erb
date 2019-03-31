@@ -1,0 +1,11 @@
+<tr>
+  <td> <%= room.name %></td>
+  <td> <%= number_with_delimiter(room.price, delimiter: ",") %></td>
+  <td>
+    <% room.tenants.each_with_index do |t, index| %>
+      <%= t.name %> <%= ", " unless index == room.tenants.count - 1 %>
+    <% end %>
+  </td>
+  <td> <%= number_with_delimiter(room.total_payable, delimiter: ",") %> </td>
+  <td><%= link_to "Remove", admin_room_path(room), method: :delete if current_user.admin? %></td>
+</tr>

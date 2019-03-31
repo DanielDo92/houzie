@@ -15,3 +15,17 @@
 .alert-alert {
   @extend .alert-danger;
 }
+
+.title-left {
+  font-size: 2em;
+  float: left;
+}
+
+.btn-right {
+  font-size: 1.5em;
+  float: right;
+}
+
+.form-label {
+  width: 5em;
+}

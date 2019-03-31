@@ -1,4 +1,8 @@
-<h2> Rooms</h2>
+<div class="title-left"> Rooms</div>
+<div class="btn-right">
+  <i class="fa fa-plus"> <%= link_to "Add room", new_admin_room_path %></i>
+</div>
+
 <table class="table table-hover">
   <thead>
   <tr>
@@ -6,16 +10,12 @@
     <th> Price (VND) </th>
     <th> Occupants </th>
     <th> Total bill (VND) </th>
+    <th></th>
   </tr>
   </thead>
   <tbody>
   <% @rooms.each do |room| %>
-    <tr>
-      <td> <%= room.name %></td>
-      <td> <%= number_with_delimiter(room.price, delimiter: ",") %></td>
-      <td> <%= room.tenants.count %></td>
-      <td> <%= number_with_delimiter(room.total_payable, delimiter: ",") %> </td>
-    </tr>
+    <%= render "rooms/room", room: room %>
   <% end %>
   </tbody>
 </table>

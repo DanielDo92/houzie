@@ -1,0 +1,9 @@
+<%= form_for [:admin, @room] do |f| %>
+  <%= f.label :name, class: "form-label" %>   : <%= f.text_field :name %> <br>
+  <%= f.label :level, class: "form-label" %>  : <%= f.text_field :level %> <br>
+  <%= f.label :area, class: "form-label" %>   : <%= f.text_field :area %> <br>
+  <%= f.label :suited, class: "form-label" %> : <%= f.select :suited, [true, false] %> <br>
+  <%= f.label :price, class: "form-label" %> :
+  <%= f.text_field :price, value: number_with_delimiter(@room.price, delimiter: ",") %> <br>
+  <%= f.submit :submit %>
+<% end %>
